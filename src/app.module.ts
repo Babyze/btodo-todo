@@ -6,6 +6,7 @@ import * as Joi from 'joi';
 import { LoggerModule } from 'nestjs-pino';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+import { TodoModule } from './todo/todo.module';
 
 @Module({
   imports: [
@@ -49,6 +50,7 @@ import { AppService } from './app.service';
         },
       },
     }),
+    TodoModule,
   ],
   controllers: [AppController],
   providers: [AppService],
